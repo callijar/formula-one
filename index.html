@@ -10,19 +10,11 @@
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Formula One</title>
     <style>
       :root {
@@ -40,65 +32,91 @@
 
       p {
         font-size: larger;
+        line-height: 1.5;
+        max-width: 80ch;
       }
 
-      .img-bg {
+      a {
+        text-decoration-color: var(--accent-color);
+        text-decoration-thickness: 2px;
+        color: var(--text-color);
+      }
+
+      a:hover {
+        background: var(--accent-color);
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+      }
+
+      .my-bg {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/893/original/hero-bg.jpg?1691739528");
+        background-size: cover; /* Adjust this based on your requirements */
+        background-repeat: no-repeat;
+        max-width: 100%;
         height: 100vh;
-        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
       }
 
       .hero {
         display: flex;
         flex-flow: column;
         justify-content: left;
+        height: 100vh;
       }
     </style>
   </head>
   <body>
-    <div
-      class="hero img-bg d-flex bg-image shadow-1-strong text-white"
-      style="
-        background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');
-      "
-    >
-      <nav class="navbar navbar-dark text-danger navbar-expand-lg">
-        <div class="container-fluid d-flex px-5 py-3">
-          <a
-            class="navbar-brand active my-brand text-reset"
-            aria-current="page"
-            href="#hero"
-            >F1</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNavAltMarkup"
-          >
-            <div class="navbar-nav">
-              <a class="nav-link" href="#section-one">Women</a>
-              <a class="nav-link" href="#section-two">Sustainability</a>
-              <a class="nav-link" href="#section-three">Schedule</a>
-              <a class="nav-link" href="#section-four">Section</a>
+    <div class="hero d-flex shadow-1-strong text-white">
+      <div class="container-fluid my-bg">
+        <nav class="navbar navbar-dark text-danger navbar-expand-lg">
+          <div class="container-fluid d-flex px-5 py-3">
+            <a
+              class="navbar-brand active my-brand text-reset"
+              aria-current="page"
+              href="#section-zero"
+              >F1</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNavAltMarkup"
+            >
+              <div class="navbar-nav">
+                <a class="nav-link" href="#section-one">Women</a>
+                <a class="nav-link" href="#section-two">Sustainability</a>
+                <a class="nav-link" href="#section-three">Schedule</a>
+                <a class="nav-link" href="#section-four">Teams</a>
+                <a class="nav-link" href="#section-five">More</a>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-      <h1 class="display-1 p-5 font-weight-bold">FORMULA1</h1>
+        </nav>
+        <h1 class="display-1 p-5 font-weight-bold">FORMULA1</h1>
+      </div>
     </div>
 
     <div class="container">
-      <div id="section-zero">
-        <h2>overview</h2>
+      <div id="section-zero" class="pt-5 pb-5">
+        <h2 class="p-5 text-danger">Why F1?</h2>
+        <p>
+          I was always fascinated with the mechanics of how cars, planes, or
+          trains moved. I rememeber watching Michael Schumacher race from a
+          young age and I became a fan!
+        </p>
+        <br />
+        <p></p>
         <p>
           Want to know how F1 works? check out this video for F1 beginners:
           <a
@@ -109,7 +127,11 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card text-white bg-danger h-100">
-              <img src="..." class="card-img-top" alt="Michael Schumacher" />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/894/original/Michael-Schumacher.jpg?1691742020"
+                class="card-img-top"
+                alt="Michael Schumacher"
+              />
               <div class="card-body">
                 <h5 class="card-title">Michael Schumacher</h5>
                 <p class="card-text">
@@ -148,16 +170,16 @@
         </div>
       </div>
 
-      <div id="section-one">
-        <h2>Women</h2>
+      <div id="section-one" class="pt-5 pb-5">
+        <h2 class="p-5 text-danger">Women</h2>
         <h3>
           Did you know that you can compete in F1 regardless of your gender?
         </h3>
         <p>Did</p>
       </div>
 
-      <div id="section-two">
-        <h2>Sustainability</h2>
+      <div id="section-two" class="pt-5 pb-5">
+        <h2 class="p-5 text-danger">Sustainability</h2>
         <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col">
             <div class="card text-white bg-dark bg-gradient">
@@ -190,14 +212,62 @@
         </div>
       </div>
 
-      <div id="section-three">
-        <h2>Ucoming races</h2>
+      <div id="section-three" class="pt-5 pb-5">
+        <h2 class="p-5 text-danger">Ucoming races</h2>
       </div>
 
-      <div id="section-four">
-        <h2>section</h2>
+      <div id="section-four" class="pt-5 pb-5">
+        <h2 class="p-5 text-danger">Teams</h2>
+      </div>
+
+      <div id="section-five" class="pt-5 pb-5">
+        <h2 class="p-5 text-danger">More</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card text-white bg-dark bg-gradient">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">NASCAR</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <a href="#" class="btn btn-danger">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-white bg-dark bg-gradient">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">MotoGP</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <a href="#" class="btn btn-danger">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script></script>
+
+    <footer class="p-5 container-fluid bg-danger text-center">
+      <a
+        href="https://www.linkedin.com/in/hajar-s-lavasani/"
+        target="_blank"
+        title="LinkedIn profile"
+        >Hajar S Lavasani</a
+      >
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
